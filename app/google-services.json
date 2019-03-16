@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "451726794928",
+    "firebase_url": "https://firedemo0603.firebaseio.com",
+    "project_id": "firedemo0603",
+    "storage_bucket": "firedemo0603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451726794928:android:f89d703b52f058cb",
+        "android_client_info": {
+          "package_name": "com.priyankaexample.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451726794928-sabuob5perdk5j9cciq0tr6ti5vq6okd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOMjaDfeL5pc4yoSigKbAbpBln-nOtgQs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

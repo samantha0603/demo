@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e15f51"
+    tools:context=".Registration" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editText5"
+        android:layout_marginBottom="22dp"
+        android:background="#e57366"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="REGISTER" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/editText5"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_marginBottom="22dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:textColor="#9d2f43"
+        android:textStyle="bold"
+        android:hint=" Your Password"
+        android:padding="5dp"
+        android:textColorHint="#a3c2c2"
+        android:gravity="center"
+        >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/editText4"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_marginBottom="22dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint=" Your phone number"
+        android:padding="5dp"
+        android:textColor="#9d2f43"
+        android:textStyle="bold"
+        android:textColorHint="#a3c2c2"
+        android:gravity="center"
+        android:inputType="phone"/>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:hint=" Your Name"
+        android:padding="5dp"
+        android:textColorHint="#a3c2c2"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#9d2f43"
+
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_marginBottom="25dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint=" Your Dept"
+        android:padding="5dp"
+        android:textColor="#9d2f43"
+        android:textStyle="bold"
+        android:textColorHint="#a3c2c2"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_above="@+id/editText2"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="Your mail ID"
+        android:padding="5dp"
+        android:textColorHint="#a3c2c2"
+        android:textColor="#9d2f43"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/k"
+        android:padding="5dp"
+        android:textColorHint="#a3c2c2"
+        android:gravity="center" />
+
+</RelativeLayout>
+
+
+
+
+

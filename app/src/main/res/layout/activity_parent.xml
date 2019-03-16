@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paint"
+    tools:context=".TeacherClasses.Teacher" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/u" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/v" />
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/Button01"
+        android:layout_below="@+id/Button01"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/w" />
+
+    <Button
+        android:id="@+id/Button04"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/Button03"
+        android:layout_below="@+id/Button03"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/y" />
+
+    <Button
+        android:id="@+id/Button05"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/Button04"
+        android:layout_below="@+id/Button04"
+        android:layout_marginTop="23dp"
+        android:background="@android:color/transparent"
+        android:text="Chat"
+        android:textSize="40dp"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/Button03"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/Button02"
+        android:layout_centerVertical="true"
+        android:background="@drawable/x" />
+
+    <Button
+        android:id="@+id/notice"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/Button05"
+        android:layout_below="@+id/Button05"
+        android:background="@android:color/transparent"
+        android:text="Notice"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

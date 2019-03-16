@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.priyankaexample.demo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivityTwo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Welcome"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.example.package.EXCLASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LogIns.StudentLogIn"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.example.package.EXCLASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.Student"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.Teacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.Parent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudSyllabus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentSyllabus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudentAttendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherAttendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentAttendance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudentTimeTable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentTimeTable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherTimeTable"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudentMarks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherMarks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentMarks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherCourse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudentCourse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentCourse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherNotice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StudentClasses.StudentNotice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ParentClasses.ParentNotice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogIns.ParentLogIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogIns.TeacherLogIn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.DemoTeacher"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherClasses.TeacherMarksShow"
+            android:screenOrientation="portrait" />
+        <activity android:name=".TeacherClasses.Marks"></activity>
+    </application>
+
+</manifest>

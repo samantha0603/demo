@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/colorPrimary" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="@dimen/buttonround"
+                android:bottomRightRadius="@dimen/buttonround"
+                android:topLeftRadius="@dimen/buttonround"
+                android:topRightRadius="@dimen/buttonround"/>
+            <solid android:color="?android:colorAccent" />
+        </shape>
+    </item>
+<item>
+    <shape android:shape="rectangle">
+    <corners android:bottomLeftRadius="@dimen/buttonround"
+        android:bottomRightRadius="@dimen/buttonround"
+        android:topLeftRadius="@dimen/buttonround"
+        android:topRightRadius="@dimen/buttonround"/>
+    <stroke android:color="@color/colorPrimary"
+        android:width="1dp"/>
+    </shape>
+</item>
+</ripple>
