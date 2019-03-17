@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/blue"
-    tools:context=".TeacherClasses.TeacherDemo" >
+    tools:context=".TeacherClasses.Teacher" >
 
     <Button
         android:id="@+id/notice_teacher"

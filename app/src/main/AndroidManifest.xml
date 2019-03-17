@@ -10,9 +10,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -79,7 +79,7 @@
             android:name=".ParentClasses.ParentTimeTable"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TeacherClasses.TeacherTimeTable"
+            android:name=".TeacherClasses.TeacherTimeTable1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".StudentClasses.StudentMarks"
@@ -120,7 +120,16 @@
         <activity
             android:name=".TeacherClasses.TeacherMarksShow"
             android:screenOrientation="portrait" />
-        <activity android:name=".TeacherClasses.Marks"></activity>
+        <activity android:name=".TeacherClasses.Marks"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".StudentClasses.StudentMarksShow"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ParentClasses.ParentShowMarks"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TeacherClasses.TeacherTimes"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TeacherClasses.TeacherChat"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

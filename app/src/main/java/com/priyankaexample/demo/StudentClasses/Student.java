@@ -47,7 +47,7 @@ public class Student extends Activity {
         marks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),StudentMarks.class);
+                Intent i = new Intent(getApplicationContext(),StudentMarksShow.class);
                 startActivity(i);
             }
         });

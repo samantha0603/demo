@@ -35,7 +35,9 @@ public class StudentLogIn extends Activity {
     ProgressBar progressBar;
 
     EditText userid, pwd;
-    String usr1, pass,mlabusr=" ",mlabpwd=" ";
+    public static String usr1;
+    static String pass;
+    String mlabusr=" ",mlabpwd=" ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,7 @@ public class StudentLogIn extends Activity {
                 usr1 = userid.getText().toString();
                 pass = pwd.getText().toString();
 
-                /*//login
+                //login
                 if(usr1.length()>0 && pass.length()>0 ) {
                     if (Welcome.who.equals("student")) {
                         Toast.makeText(getApplicationContext(), "Logging in as " + Welcome.who, Toast.LENGTH_SHORT).show();
@@ -116,7 +118,7 @@ public class StudentLogIn extends Activity {
                                     editor.putString("pwd", mlabpwd);
                                     editor.putString("logined", "true");
                                     editor.commit();
-                                    startActivity(new Intent(getApplicationContext(), DemoTeacher.class));
+                                    startActivity(new Intent(getApplicationContext(), Teacher.class));
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
 
@@ -168,7 +170,7 @@ public class StudentLogIn extends Activity {
                             }
                         });
                     }
-                }*/
+                }/*
 
                 if(Welcome.who.equals("teacher")){
                     startActivity(new Intent(getApplicationContext(),Teacher.class));
@@ -183,7 +185,7 @@ public class StudentLogIn extends Activity {
 
 
 
-                }
+                }*/
 
 
                 //Toast.makeText(getApplicationContext(),"error login",Toast.LENGTH_LONG).show();

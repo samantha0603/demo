@@ -47,7 +47,7 @@ public class Parent extends Activity {
         marks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),ParentMarks.class);
+                Intent i = new Intent(getApplicationContext(),ParentShowMarks.class);
                 startActivity(i);
             }
         });

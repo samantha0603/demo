@@ -42,18 +42,6 @@
         android:background="@drawable/y" />
 
     <Button
-        android:id="@+id/Button05"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_alignLeft="@+id/Button04"
-        android:layout_below="@+id/Button04"
-        android:layout_marginTop="23dp"
-        android:background="@android:color/transparent"
-        android:text="Chat"
-        android:textSize="40dp"
-        android:textColor="#ffffff"/>
-
-    <Button
         android:id="@+id/Button03"
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -65,12 +53,13 @@
         android:id="@+id/notice"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_alignLeft="@+id/Button05"
-        android:layout_below="@+id/Button05"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp"
         android:background="@android:color/transparent"
         android:text="Notice"
-        android:textStyle="bold"
+        android:textColor="#ffffff"
         android:textSize="40dp"
-        android:textColor="#ffffff" />
+        android:textStyle="bold" />
 
 </RelativeLayout>

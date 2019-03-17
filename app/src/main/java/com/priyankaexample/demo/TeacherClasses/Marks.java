@@ -130,7 +130,6 @@ public class Marks extends Activity {
             @Override
             public void onResponse(Call<List<MarksData>> call, Response<List<MarksData>> response) {
                 list1 = response.body();
-                Toast.makeText(getApplicationContext(),response.body().get(0).getCgpa(),Toast.LENGTH_SHORT).show();
                 if (list1.isEmpty()){
                     nodata.setVisibility(View.VISIBLE);
                 }
@@ -138,7 +137,6 @@ public class Marks extends Activity {
 
                     progressBar.setVisibility(View.GONE);
                 }
-
                 recyclerView.setAdapter(new DataAdapter(list1, R.layout.marks_view, getApplicationContext()));
 
             }

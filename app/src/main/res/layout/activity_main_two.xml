@@ -8,13 +8,9 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/logo"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Welcome to College Statistics Portal"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"/>
 
 </LinearLayout>

@@ -46,6 +46,7 @@
         android:layout_marginBottom="22dp"
         android:background="#FFFFFF"
         android:ems="10"
+        android:maxLength="10"
         android:hint=" Your phone number"
         android:padding="5dp"
         android:textColor="#9d2f43"

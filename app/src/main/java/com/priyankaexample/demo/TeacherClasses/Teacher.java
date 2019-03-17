@@ -15,12 +15,13 @@ public class Teacher extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher);
-        Button syllabus,attendance,timetable,marks,notice;
+        Button syllabus,attendance,timetable,marks,notice,course;
         syllabus = findViewById(R.id.button1);
         attendance = findViewById(R.id.Button04);
         timetable = findViewById(R.id.Button01);
         marks = findViewById(R.id.Button02);
         notice = findViewById(R.id.notice_teacher);
+        course = findViewById(R.id.button9);
         syllabus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +40,7 @@ public class Teacher extends Activity {
         timetable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),TeacherTimeTable.class);
+                Intent i = new Intent(getApplicationContext(),TeacherTimes.class);
                 startActivity(i);
             }
         });
@@ -54,6 +55,13 @@ public class Teacher extends Activity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),TeacherNotice.class);
+                startActivity(i);
+            }
+        });
+        course.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),TeacherCourse.class);
                 startActivity(i);
             }
         });

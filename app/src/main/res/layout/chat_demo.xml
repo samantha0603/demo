@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardid"
+        android:orientation="vertical">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Sender:"/>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="sender"
+        android:id="@+id/senderid"
+        android:textSize="25dp"/>
+
+    </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Reciever:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="sender"
+                android:id="@+id/recieverid"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Message:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="message"
+                android:textSize="20dp"
+                android:id="@+id/messageid"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>

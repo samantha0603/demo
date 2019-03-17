@@ -11,6 +11,8 @@ import android.widget.Toast;
 import com.priyankaexample.demo.LogIns.StudentLogIn;
 import com.priyankaexample.demo.Retrofit.ApiClient;
 import com.priyankaexample.demo.Retrofit.ApiInterface;
+import com.priyankaexample.demo.Retrofit.ApiInterfacePut;
+import com.priyankaexample.demo.Retrofit.ApiService;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,7 +28,7 @@ public class Registration extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        EditText id,phn,mail,pwd,dept;
+        final EditText id,phn,mail,pwd,dept;
         Button reg;
         pwd = findViewById(R.id.editText2);
         phn = findViewById(R.id.editText3);
@@ -34,15 +36,17 @@ public class Registration extends Activity {
         id = findViewById(R.id.editText1);
         dept = findViewById(R.id.editText5);
         reg = findViewById(R.id.button1);
-        final String regpwd,regphn,regmail,regid,regdept;
-        regpwd = pwd.getText().toString();
-        regphn = phn.getText().toString();
-        regmail = mail.getText().toString();
-        regid = id.getText().toString();
-        regdept = dept.getText().toString();
+
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String regpwd,regphn,regmail,regid,regdept;
+
+                regpwd = pwd.getText().toString();
+                regphn = phn.getText().toString();
+                regmail = mail.getText().toString();
+                regid = id.getText().toString();
+                regdept = dept.getText().toString();
                 JSONObject jsonObject=new JSONObject();
                 try {
                     jsonObject.put("username",regid);
@@ -51,7 +55,7 @@ public class Registration extends Activity {
                     jsonObject.put("mail",regmail);
                     jsonObject.put("dept",regdept);
                     if(Welcome.who.equals("student")){
-                    ApiInterface apiPut = ApiClient.getApiClient().create(ApiInterface.class);
+                    ApiInterfacePut apiPut = ApiService.getService().create(ApiInterfacePut.class);
                     Call<ResponseBody> body=apiPut.StudentRegistration(jsonObject.toString());
                     body.enqueue(new Callback<ResponseBody>() {
                         @Override
@@ -67,7 +71,7 @@ public class Registration extends Activity {
                         }
                     });
                     }else if(Welcome.who.equals("teacher")){
-                        ApiInterface apiPut = ApiClient.getApiClient().create(ApiInterface.class);
+                        ApiInterfacePut apiPut = ApiService.getService().create(ApiInterfacePut.class);
                         Call<ResponseBody> body=apiPut.TeacherRegistration(jsonObject.toString());
                         body.enqueue(new Callback<ResponseBody>() {
                             @Override
@@ -84,7 +88,7 @@ public class Registration extends Activity {
 
                     });
                     }else if (Welcome.who.equals("parent")){
-                            ApiInterface apiPut = ApiClient.getApiClient().create(ApiInterface.class);
+                        ApiInterfacePut apiPut = ApiService.getService().create(ApiInterfacePut.class);
                             Call<ResponseBody> body=apiPut.ParentRegistration(jsonObject.toString());
                             body.enqueue(new Callback<ResponseBody>() {
                                 @Override
@@ -103,8 +107,6 @@ public class Registration extends Activity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                Intent i = new Intent(getApplicationContext(),StudentLogIn.class);
-                startActivity(i);
             }
         });
     }

@@ -1,289 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@drawable/love"
-    >
+    android:layout_height="match_parent"
+    tools:context=".StudentClasses.StudentCourse">
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipid"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editText14"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/homerv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText10"
-        android:layout_alignBottom="@+id/editText10"
-        android:layout_alignLeft="@+id/editText12"
-        android:layout_alignRight="@+id/editText13"
-        android:ems="10"
-        android:background="#AA0C2C17"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:gravity="center"  />
-
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText6"
-        android:layout_alignBottom="@+id/editText6"
-        android:layout_alignLeft="@+id/editText9"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btnView"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="44dp"
-        android:layout_toRightOf="@+id/editText6"
-        android:text="View"
-        android:background="#14A584"
-
-        android:textColor="#FFFFFF"/>
-
-    <EditText
-        android:id="@+id/editName"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText1"
-        android:layout_alignBottom="@+id/editText1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="24dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText4"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginBottom="27dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical" />
 
     <TextView
-        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editRollno"
-        android:layout_alignBottom="@+id/editRollno"
-        android:layout_alignParentRight="true"
-        android:text="EnterSubject"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:text="Please Check Your Connection"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:id="@+id/nocon"
+        />
+
+
 
     <TextView
-        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignLeft="@+id/editText1"
-        android:text="CO"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:text="No data found"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:id="@+id/nodata"
+        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editName"
-        android:layout_alignLeft="@+id/editName"
-        android:text="chapter"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:text="weight"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText7"
-        android:layout_marginBottom="18dp"
-        android:layout_toLeftOf="@+id/textView1"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editMarks"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText7"
-        android:layout_alignBottom="@+id/editText7"
-        android:layout_alignLeft="@+id/editName"
-        android:layout_alignRight="@+id/editName"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText9"
-        android:layout_alignBottom="@+id/editText9"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignRight="@+id/editText4"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText14"
-        android:layout_alignLeft="@+id/editText12"
-        android:layout_alignRight="@+id/editText12"
-        android:layout_marginBottom="25dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText9"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText13"
-        android:layout_alignBottom="@+id/editText13"
-        android:layout_alignLeft="@+id/editText8"
-        android:layout_alignRight="@+id/editText8"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editText8"
-        android:layout_alignBottom="@+id/editText8"
-        android:layout_alignLeft="@+id/editText11"
-        android:layout_alignRight="@+id/editText11"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_below="@+id/editText1"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText7"
-        android:layout_below="@+id/editText7"
-        android:layout_toLeftOf="@+id/textView1"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnView"
-        android:layout_alignLeft="@+id/editText5"
-        android:layout_alignRight="@+id/editText5"
-        android:layout_marginBottom="20dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editRollno"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginTop="47dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/textView3"
-        android:layout_marginRight="18dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText5"
-        android:layout_alignLeft="@+id/editMarks"
-        android:layout_alignRight="@+id/editMarks"
-        android:layout_marginBottom="15dp"
-        android:background="#AA0C2C17"
-        android:ems="10"
-        android:gravity="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -1,8 +1,11 @@
 package com.priyankaexample.demo.Retrofit;
 
+import com.priyankaexample.demo.adapters.CourseData;
 import com.priyankaexample.demo.adapters.LoginData;
 import com.priyankaexample.demo.adapters.LoginDataBringer;
 import com.priyankaexample.demo.adapters.MarksData;
+import com.priyankaexample.demo.adapters.NoticeData;
+import com.priyankaexample.demo.adapters.TeacherTimeTable;
 
 import java.util.List;
 
@@ -26,16 +29,7 @@ public interface ApiInterface {
     @GET("parent_login/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
     Call<List<LoginDataBringer>> parentLogin(@Query("q") String s);
 
-    @POST("studentLogin/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
-    @Headers({"Content-Type: application/json"})
-    Call<ResponseBody> StudentRegistration(@Body String str);
-    @POST("teacherLogin/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
-    @Headers({"Content-Type: application/json"})
-    Call<ResponseBody> TeacherRegistration(@Body String str);
 
-    @POST("parentLogin/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
-    @Headers({"Content-Type: application/json"})
-    Call<ResponseBody> ParentRegistration(@Body String str);
 
     @GET("collections/{col}")
     Call<List<LoginData>> getPhone(@Path("col") String col, @Query("apiKey") String key, @Query("q") String q);
@@ -48,4 +42,17 @@ public interface ApiInterface {
     @GET("marks/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
     Call<List<MarksData>> getMarks();
 
+    @GET("marks/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
+    Call<List<MarksData>> getMyMarks(@Query("q") String s);
+    @GET("teachertimetable/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
+    Call<List<TeacherTimeTable>> getTeacherTime();
+
+    @GET("everydaytimetable/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
+    Call<List<TeacherTimeTable>> getStudentTime();
+
+    @GET("courses/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
+    Call<List<CourseData>> getStudentCourse();
+
+    @GET("noti/?apiKey=PS-NhgOwgrqYOLhiMvrdHj_PW5rjXrpq")
+    Call<List<NoticeData>> getStudentNotices();
 }
