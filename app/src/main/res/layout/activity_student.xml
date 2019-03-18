@@ -119,6 +119,18 @@
         android:layout_marginTop="50dp"
         android:src="@drawable/tr" />
 
+    <Button
+        android:id="@+id/logoutbtn1"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="126dp"
+        android:background="@android:color/transparent"
+        android:text="LOG OUT"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
 
 
 </RelativeLayout>

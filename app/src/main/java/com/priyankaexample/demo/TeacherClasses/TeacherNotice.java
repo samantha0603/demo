@@ -38,7 +38,7 @@ public class TeacherNotice extends Activity {
             submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    submit.setEnabled(false);
                     InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Activity.INPUT_METHOD_SERVICE);
                     imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
 
@@ -61,11 +61,13 @@ public class TeacherNotice extends Activity {
 
 
                                     Toast.makeText(getApplicationContext(), "Notice Posted Successfully", Toast.LENGTH_SHORT).show();
+                                    submit.setEnabled(true);
                                 }
 
                                 @Override
                                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                                     Toast.makeText(getApplicationContext(), "Please try again", Toast.LENGTH_SHORT).show();
+                                    submit.setEnabled(true);
                                 }
                             });
                         } catch (JSONException e) {

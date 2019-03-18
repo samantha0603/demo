@@ -2,15 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FABC3D"
+    android:background="@drawable/capture"
     android:layout_gravity="center"
     android:id="@+id/lin_lay"
     android:gravity="center"
     android:orientation="vertical" >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/logo"/>
+
 
 </LinearLayout>

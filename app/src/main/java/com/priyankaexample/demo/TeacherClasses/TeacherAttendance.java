@@ -32,7 +32,7 @@ public class TeacherAttendance extends Activity {
         final PieChart pieChart;
 
             final EditText searchname = findViewById(R.id.searchatt);
-            Button btn = findViewById(R.id.searchbtn);
+            final Button btn = findViewById(R.id.searchbtn);
 
             pieChart=findViewById(R.id.piechart);
             pieChart.setVisibility(View.INVISIBLE);
@@ -47,7 +47,7 @@ public class TeacherAttendance extends Activity {
             // List<String> s = new ArrayList<>(Arrays.asList("hi", "hello", "wow"));
             List<PieEntry> list=new ArrayList<>();
         Random random=new Random();
-        int per =random.nextInt(100);
+        int per =random.nextInt(50)+50;
             list.add(new PieEntry(per,"Present"));
             list.add(new PieEntry((100-per),"Absent"));
 
@@ -61,9 +61,11 @@ public class TeacherAttendance extends Activity {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    btn.setEnabled(false);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                     imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                     if (searchname.getText().toString().length() < 10){
+                        btn.setEnabled(true);
                         Toast.makeText(getApplicationContext(),"Provide a valid registered number",Toast.LENGTH_SHORT).show();
                     }else{
                         pieChart.setVisibility(View.VISIBLE);
@@ -72,6 +74,7 @@ public class TeacherAttendance extends Activity {
                             public void onClick(View v) {
                                 InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
                                 imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                                btn.setEnabled(true);
                             }
                         });
                     }

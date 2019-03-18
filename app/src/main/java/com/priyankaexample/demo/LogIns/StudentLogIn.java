@@ -51,15 +51,18 @@ public class StudentLogIn extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
+                b.setEnabled(false);
 
 
                 userid = findViewById(R.id.editText1);
                 pwd = findViewById(R.id.editText2);
                 usr1 = userid.getText().toString();
                 pass = pwd.getText().toString();
+                int i = 0;
 
                 //login
-                if(usr1.length()>0 && pass.length()>0 ) {
+
+                if(pass.length()>=6 && usr1.length() ==10) {
                     if (Welcome.who.equals("student")) {
                         Toast.makeText(getApplicationContext(), "Logging in as " + Welcome.who, Toast.LENGTH_SHORT).show();
                         String s = "{\"username\":\"" + usr1 + "\"}" + "{\"password\":\"" + pass + "\"}";
@@ -83,9 +86,10 @@ public class StudentLogIn extends Activity {
                                     editor.putString("logined", "true");
                                     editor.commit();
                                     startActivity(new Intent(getApplicationContext(), Student.class));
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
-
+                                    b.setEnabled(true);
                                 }
 
 
@@ -94,6 +98,7 @@ public class StudentLogIn extends Activity {
                             @Override
                             public void onFailure(Call<List<LoginDataBringer>> call, Throwable t) {
                                 Toast.makeText(v.getContext(), "kk", Toast.LENGTH_SHORT).show();
+                                b.setEnabled(true);
                             }
                         });
                     }else if (Welcome.who.equals("teacher")){
@@ -121,6 +126,8 @@ public class StudentLogIn extends Activity {
                                     startActivity(new Intent(getApplicationContext(), Teacher.class));
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                                    b.setEnabled(true);
+
 
                                 }
 
@@ -130,6 +137,8 @@ public class StudentLogIn extends Activity {
                             @Override
                             public void onFailure(Call<List<LoginDataBringer>> call, Throwable t) {
                                 Toast.makeText(v.getContext(), "kk", Toast.LENGTH_SHORT).show();
+                                b.setEnabled(true);
+
                             }
                         });
 
@@ -158,6 +167,8 @@ public class StudentLogIn extends Activity {
                                     startActivity(new Intent(getApplicationContext(), Parent.class));
                                 } else {
                                     Toast.makeText(getApplicationContext(), "Invalid Username or Password", Toast.LENGTH_SHORT).show();
+                                    b.setEnabled(true);
+
 
                                 }
 
@@ -167,6 +178,8 @@ public class StudentLogIn extends Activity {
                             @Override
                             public void onFailure(Call<List<LoginDataBringer>> call, Throwable t) {
                                 Toast.makeText(v.getContext(), "kk", Toast.LENGTH_SHORT).show();
+                                b.setEnabled(true);
+
                             }
                         });
                     }
@@ -195,7 +208,9 @@ public class StudentLogIn extends Activity {
         regt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                regt.setEnabled(false);
                 startActivity(new Intent(getApplicationContext(),Registration.class));
+                finish();
             }
         });
     }

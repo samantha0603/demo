@@ -55,11 +55,24 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="123dp"
         android:background="@android:color/transparent"
         android:text="Notice"
         android:textColor="#ffffff"
         android:textSize="40dp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/logoutbtn2"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:background="@android:color/transparent"
+        android:text="LOG OUT"
+
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
 
 </RelativeLayout>

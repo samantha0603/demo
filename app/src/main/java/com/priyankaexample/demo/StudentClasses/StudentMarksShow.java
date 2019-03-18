@@ -39,7 +39,7 @@ public class StudentMarksShow extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_show_marks);
+        setContentView(R.layout.activity_student_marks_show);
         final RecyclerView recyclerView;
         ProgressBar progressBar ;
 

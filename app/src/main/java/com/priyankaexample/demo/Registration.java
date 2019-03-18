@@ -42,11 +42,26 @@ public class Registration extends Activity {
             public void onClick(View v) {
                 String regpwd,regphn,regmail,regid,regdept;
 
+
                 regpwd = pwd.getText().toString();
                 regphn = phn.getText().toString();
                 regmail = mail.getText().toString();
                 regid = id.getText().toString();
                 regdept = dept.getText().toString();
+                int flag = 0;
+                if(regid.length() != 10){
+                    Toast.makeText(getApplicationContext(),"Your ID should be your registered number",Toast.LENGTH_SHORT).show();
+                    flag = 1;
+                }if (regpwd.length() < 6){
+                    Toast.makeText(getApplicationContext(),"Your password should be atleast 6 characters long",Toast.LENGTH_SHORT).show();
+                    flag = 1;
+                }if (regdept.length() < 2){
+                    Toast.makeText(getApplicationContext(),"Enter a valid dept",Toast.LENGTH_SHORT).show();
+                    flag = 1;
+                }if (regphn.length() < 10){
+                    Toast.makeText(getApplicationContext(),"Enter a valid phone number",Toast.LENGTH_SHORT).show();
+                    flag = 1;
+                }if(flag == 0){
                 JSONObject jsonObject=new JSONObject();
                 try {
                     jsonObject.put("username",regid);
@@ -106,7 +121,7 @@ public class Registration extends Activity {
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                }
+                }                }
             }
         });
     }
